@@ -147,7 +147,7 @@ public class CandidatureController {
     @FXML
     private void onEnvoyerCandidatureButtonClick() {
         try {
-            // Récupérer les données des champs
+            // Recuperer les données des champs
             String nom = nomField.getText();
             String prenom = prenomField.getText();
             double noteMoyenne = Double.parseDouble(noteMoyenneField.getText());
@@ -163,13 +163,15 @@ public class CandidatureController {
             // Calculer le score de la candidature
             double scoreCandidature = (noteMoyenne + evaluationEnseignant1 + evaluationEnseignant2) / 3;
 
+            //Créer un objet candidature
+            //Candidature candidature = new Candidature(etudiant, bourse);
+
             // Envoi des données à la base de données
             Connection connexion = ConnexionJDBC.obtenirConnexion();
 
-            // Utilisez la connexion pour insérer les données dans la base de données
-            // (Ajoutez votre logique d'insertion ici)
+            etudiant.insertIntoDatabase();
 
-            // Fermer la connexion
+
             ConnexionJDBC.fermerConnexion(connexion);
 
             // Réinitialiser les champs de l'interface
@@ -187,6 +189,7 @@ public class CandidatureController {
 
 
             scoreLabel.setText(""); // Réinitialiser le label
+
 
             //Afficher que les données ont bien été sauvegardees
             printTemporaryMessage("Candidature enregistrée ! ", 5);
