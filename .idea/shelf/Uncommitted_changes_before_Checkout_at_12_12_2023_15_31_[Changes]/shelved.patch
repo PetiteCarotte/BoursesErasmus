@@ -1,0 +1,617 @@
+Index: .idea/encodings.xml
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+deleted file mode 100644
+--- a/.idea/encodings.xml	(revision b1623bf0c19751ea6f4e829e951c6adf8308d0ff)
++++ /dev/null	(revision b1623bf0c19751ea6f4e829e951c6adf8308d0ff)
+@@ -1,7 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="Encoding">
+-    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+-    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	(revision b1623bf0c19751ea6f4e829e951c6adf8308d0ff)
++++ /dev/null	(revision b1623bf0c19751ea6f4e829e951c6adf8308d0ff)
+@@ -1,8 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+-# Editor-based HTTP Client requests
+-/httpRequests/
+-# Datasource local storage ignored files
+-/dataSources/
+-/dataSources.local.xml
+Index: .idea/uiDesigner.xml
+===================================================================
+diff --git a/.idea/uiDesigner.xml b/.idea/uiDesigner.xml
+deleted file mode 100644
+--- a/.idea/uiDesigner.xml	(revision b1623bf0c19751ea6f4e829e951c6adf8308d0ff)
++++ /dev/null	(revision b1623bf0c19751ea6f4e829e951c6adf8308d0ff)
+@@ -1,124 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="Palette2">
+-    <group name="Swing">
+-      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
+-      </item>
+-      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
+-      </item>
+-      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
+-      </item>
+-      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.svg" removable="false" auto-create-binding="false" can-attach-label="true">
+-        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
+-      </item>
+-      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
+-        <initial-values>
+-          <property name="text" value="Button" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+-        <initial-values>
+-          <property name="text" value="RadioButton" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+-        <initial-values>
+-          <property name="text" value="CheckBox" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
+-        <initial-values>
+-          <property name="text" value="Label" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+-          <preferred-size width="150" height="-1" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+-          <preferred-size width="150" height="-1" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+-          <preferred-size width="150" height="-1" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
+-      </item>
+-      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+-          <preferred-size width="200" height="200" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+-          <preferred-size width="200" height="200" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+-      </item>
+-      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+-      </item>
+-      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
+-      </item>
+-      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
+-      </item>
+-      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
+-          <preferred-size width="-1" height="20" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
+-      </item>
+-      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
+-      </item>
+-    </group>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: src/main/java/models/Bourse.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package models;\r\n\r\npublic class Bourse {\r\n\r\n        private long id;\r\n        private String destination;\r\n        private int postesDisponibles;\r\n        private String responsableLocal;\r\n\r\n    // Constructeur\r\n    public Bourse(long id, String destination, int postesDisponibles, String responsableLocal) {\r\n        this.id = id;\r\n        this.destination = destination;\r\n        this.postesDisponibles = postesDisponibles;\r\n        this.responsableLocal = responsableLocal;\r\n    }\r\n    public Bourse(long id) {\r\n        this.id = id;\r\n    }\r\n\r\n    // Getters et setters\r\n    public long getId() {\r\n        return id;\r\n    }\r\n\r\n    public void setId(long id) {\r\n        this.id = id;\r\n    }\r\n\r\n    public String getDestination() {\r\n        return destination;\r\n    }\r\n\r\n    public void setDestination(String destination) {\r\n        this.destination = destination;\r\n    }\r\n\r\n    public int getPostesDisponibles() {\r\n        return postesDisponibles;\r\n    }\r\n\r\n    public void setPostesDisponibles(int postesDisponibles) {\r\n        this.postesDisponibles = postesDisponibles;\r\n    }\r\n\r\n    public String getResponsableLocal() {\r\n        return responsableLocal;\r\n    }\r\n\r\n    public void setResponsableLocal(String responsableLocal) {\r\n        this.responsableLocal = responsableLocal;\r\n    }\r\n\r\n    // Autres methodes si necessaire\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"Bourse{\" +\r\n                \"id=\" + id +\r\n                \", destination='\" + destination + '\\'' +\r\n                \", postesDisponibles=\" + postesDisponibles +\r\n                \", responsableLocal='\" + responsableLocal + '\\'' +\r\n                '}';\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/models/Bourse.java b/src/main/java/models/Bourse.java
+--- a/src/main/java/models/Bourse.java	(revision b1623bf0c19751ea6f4e829e951c6adf8308d0ff)
++++ b/src/main/java/models/Bourse.java	(date 1702389863334)
+@@ -1,5 +1,9 @@
+ package models;
+ 
++import java.sql.Connection;
++import java.sql.PreparedStatement;
++import java.sql.SQLException;
++
+ public class Bourse {
+ 
+         private long id;
+@@ -51,7 +55,43 @@
+         this.responsableLocal = responsableLocal;
+     }
+ 
+-    // Autres methodes si necessaire
++    public void insertIntoDatabase() {
++        Connection connection = null;
++        PreparedStatement preparedStatement = null;
++
++        try {
++            // Get the database connection
++            connection = ConnexionJDBC.getConnexion();
++
++            // Prepare the SQL statement
++            String insertQuery = "INSERT INTO Bourse (id, destination, postesDisponibles, responsableLocal) VALUES (?, ?, ?, ?)";
++            preparedStatement = connection.prepareStatement(insertQuery);
++
++            // Set the parameters
++            preparedStatement.setLong(1, id);
++            preparedStatement.setString(2, destination);
++            preparedStatement.setInt(3, postesDisponibles);
++            preparedStatement.setString(4, responsableLocal);
++
++            // Execute the update
++            preparedStatement.executeUpdate();
++
++            System.out.println("Bourse inserted into the database successfully.");
++
++        } catch (SQLException e) {
++            e.printStackTrace();
++        } finally {
++            // Close resources
++            if (preparedStatement != null) {
++                try {
++                    preparedStatement.close();
++                } catch (SQLException e) {
++                    e.printStackTrace();
++                }
++            }
++            ConnexionJDBC.fermerConnexion(connection);
++        }
++    }
+ 
+     @Override
+     public String toString() {
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>target/\r\n!.mvn/wrapper/maven-wrapper.jar\r\n!**/src/main/**/target/\r\n!**/src/test/**/target/\r\n\r\n### IntelliJ IDEA ###\r\n.idea/modules.xml\r\n.idea/jarRepositories.xml\r\n.idea/compiler.xml\r\n.idea/libraries/\r\n*.iws\r\n*.iml\r\n*.ipr\r\n\r\n### Eclipse ###\r\n.apt_generated\r\n.classpath\r\n.factorypath\r\n.project\r\n.settings\r\n.springBeans\r\n.sts4-cache\r\n\r\n### NetBeans ###\r\n/nbproject/private/\r\n/nbbuild/\r\n/dist/\r\n/nbdist/\r\n/.nb-gradle/\r\nbuild/\r\n!**/src/main/**/build/\r\n!**/src/test/**/build/\r\n\r\n### VS Code ###\r\n.vscode/\r\n\r\n### Mac OS ###\r\n.DS_Store
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+--- a/.gitignore	(revision b1623bf0c19751ea6f4e829e951c6adf8308d0ff)
++++ b/.gitignore	(date 1702358937532)
+@@ -35,4 +35,5 @@
+ .vscode/
+ 
+ ### Mac OS ###
+-.DS_Store
+\ No newline at end of file
++.DS_Store
++/.metadata/
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"VcsDirectoryMappings\">\r\n    <mapping directory=\"$PROJECT_DIR$\" vcs=\"Git\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+--- a/.idea/vcs.xml	(revision b1623bf0c19751ea6f4e829e951c6adf8308d0ff)
++++ b/.idea/vcs.xml	(date 1702362349458)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++    <mapping directory="" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_20\" default=\"true\" project-jdk-name=\"openjdk-20\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision b1623bf0c19751ea6f4e829e951c6adf8308d0ff)
++++ b/.idea/misc.xml	(date 1702362349367)
+@@ -1,14 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ExternalStorageConfigurationManager" enabled="true" />
+-  <component name="MavenProjectsManager">
+-    <option name="originalFiles">
+-      <list>
+-        <option value="$PROJECT_DIR$/pom.xml" />
+-      </list>
+-    </option>
+-  </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="openjdk-20" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="openjdk-21 (2)" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/controllers/CandidatureController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package controllers;\r\nimport javafx.animation.PauseTransition;\r\nimport javafx.fxml.FXML;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.CheckBox;\r\nimport javafx.scene.control.Label;\r\nimport javafx.scene.control.TextField;\r\nimport javafx.scene.text.Text;\r\nimport javafx.util.Duration;\r\nimport models.Bourse;\r\nimport models.Candidature;\r\nimport models.ConnexionJDBC;\r\nimport models.Etudiant;\r\n\r\nimport java.sql.Connection;\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\n\r\npublic class CandidatureController {\r\n\r\n    @FXML\r\n    private TextField nomField;\r\n\r\n    @FXML\r\n    private TextField prenomField;\r\n\r\n    @FXML\r\n    private CheckBox bourse1Checkbox;\r\n\r\n    @FXML\r\n    private CheckBox bourse2Checkbox;\r\n\r\n    @FXML\r\n    private CheckBox bourse3Checkbox;\r\n\r\n    @FXML\r\n    private CheckBox bourse4Checkbox;\r\n\r\n    @FXML\r\n    private TextField noteMoyenneField;\r\n\r\n    @FXML\r\n    private TextField noteEnseignant1Field;\r\n\r\n    @FXML\r\n    private TextField noteEnseignant2Field;\r\n\r\n    @FXML\r\n    private Button calculScoreButton;\r\n\r\n    @FXML\r\n    private Label scoreLabel;\r\n\r\n    @FXML\r\n    private Label sendLabel;\r\n\r\n    @FXML\r\n    private Label checkBoxLabel;\r\n\r\n    private Etudiant etudiant;\r\n\r\n    private int evaluationEnseignant1;\r\n    private int evaluationEnseignant2;\r\n\r\n    private int nombreCheckBoxSelectionnees = 0;\r\n    private final int seuilBoursesSelectionnees = 2;\r\n\r\n    @FXML\r\n    private void initialize() {\r\n        // Ajouter des écouteurs pour chaque CheckBox\r\n        addListenerCheckBox(bourse1Checkbox);\r\n        addListenerCheckBox(bourse2Checkbox);\r\n        addListenerCheckBox(bourse3Checkbox);\r\n        addListenerCheckBox(bourse4Checkbox);\r\n    }\r\n\r\n    private void addListenerCheckBox(CheckBox checkBox) {\r\n        checkBox.selectedProperty().addListener((observable, oldValue, newValue) -> {\r\n            // Mettre à jour le message\r\n            update();\r\n        });\r\n    }\r\n\r\n    private void update() {\r\n        int nombreBoursesSelectionnees = 0;\r\n\r\n        // Compter le nombre de bourses sélectionnées\r\n        if (bourse1Checkbox.isSelected()) nombreBoursesSelectionnees++;\r\n        if (bourse2Checkbox.isSelected()) nombreBoursesSelectionnees++;\r\n        if (bourse3Checkbox.isSelected()) nombreBoursesSelectionnees++;\r\n        if (bourse4Checkbox.isSelected()) nombreBoursesSelectionnees++;\r\n\r\n        // Afficher le message uniquement si le nombre dépasse le seuil\r\n        if (nombreBoursesSelectionnees > seuilBoursesSelectionnees) {\r\n            checkBoxLabel.setText(\"     2 bourses maximum !\");\r\n        } else {\r\n            checkBoxLabel.setText(\"\");\r\n        }\r\n    }\r\n\r\n    @FXML\r\n    private void onCalculScoreButtonClick() {\r\n    try {\r\n\r\n\r\n        // Récupérer les données des champs\r\n        String nom = nomField.getText();\r\n        String prenom = prenomField.getText();\r\n        double noteMoyenne = Double.parseDouble(noteMoyenneField.getText());\r\n        int evaluationEnseignant1 = Integer.parseInt(noteEnseignant1Field.getText());\r\n        int evaluationEnseignant2 = Integer.parseInt(noteEnseignant2Field.getText());\r\n\r\n        // Créer un objet Etudiant\r\n        etudiant = new Etudiant();\r\n        etudiant.setNom(nom);\r\n        etudiant.setPrenom(prenom);\r\n        etudiant.setNoteMoyenne(noteMoyenne);\r\n\r\n        // Calculer le score de la candidature\r\n        double scoreCandidature = (noteMoyenne + evaluationEnseignant1 + evaluationEnseignant2) / 3;\r\n\r\n        System.out.println(\"Note moyenne : \" + noteMoyenneField.getText());\r\n        System.out.println(\"Note enseignant 1 : \" + noteEnseignant1Field.getText());\r\n        System.out.println(\"Note enseignant 2 : \" + noteEnseignant2Field.getText());\r\n\r\n        // Afficher le résultat\r\n        scoreLabel.setText(\"Score : \" + scoreCandidature);\r\n    }catch(Exception e){\r\n        e.printStackTrace();\r\n    }\r\n    }\r\n\r\n    private Candidature createCandidature(Etudiant etudiant, int numeroBourse) {\r\n        // Créer et retourner une instance de Candidature avec les données nécessaires\r\n        // (Vous devrez ajuster cela selon la structure de votre application)\r\n        // Assumez que vous avez une classe Bourse qui peut être initialisée avec un numéro.\r\n        return new Candidature(etudiant, new Bourse(numeroBourse), evaluationEnseignant1, evaluationEnseignant2);\r\n    }\r\n\r\n    private void printTemporaryMessage(String message, int dureeEnSecondes){\r\n        sendLabel.setText(message);\r\n        PauseTransition pause = new PauseTransition(Duration.seconds(dureeEnSecondes));\r\n        pause.setOnFinished(event -> sendLabel.setText(\"\"));\r\n        pause.play();\r\n    }\r\n\r\n    @FXML\r\n    private void onEnvoyerCandidatureButtonClick() {\r\n        try {\r\n            // Récupérer les données des champs\r\n            String nom = nomField.getText();\r\n            String prenom = prenomField.getText();\r\n            double noteMoyenne = Double.parseDouble(noteMoyenneField.getText());\r\n            evaluationEnseignant1 = Integer.parseInt(noteEnseignant1Field.getText());\r\n            evaluationEnseignant2 = Integer.parseInt(noteEnseignant2Field.getText());\r\n\r\n            // Créer un objet Etudiant\r\n            etudiant = new Etudiant();\r\n            etudiant.setNom(nom);\r\n            etudiant.setPrenom(prenom);\r\n            etudiant.setNoteMoyenne(noteMoyenne);\r\n\r\n            // Calculer le score de la candidature\r\n            double scoreCandidature = (noteMoyenne + evaluationEnseignant1 + evaluationEnseignant2) / 3;\r\n\r\n            // Envoi des données à la base de données\r\n            Connection connexion = ConnexionJDBC.getConnexion();\r\n\r\n            // Utilisez la connexion pour insérer les données dans la base de données\r\n            // (Ajoutez votre logique d'insertion ici)\r\n\r\n            // Fermer la connexion\r\n            ConnexionJDBC.fermerConnexion(connexion);\r\n\r\n            // Réinitialiser les champs de l'interface\r\n            nomField.clear();\r\n            prenomField.clear();\r\n            noteMoyenneField.clear();\r\n            noteEnseignant1Field.clear();\r\n            noteEnseignant2Field.clear();\r\n\r\n            // Décocher les CheckBox\r\n            bourse1Checkbox.setSelected(false);\r\n            bourse2Checkbox.setSelected(false);\r\n            bourse3Checkbox.setSelected(false);\r\n            bourse4Checkbox.setSelected(false);\r\n\r\n\r\n            scoreLabel.setText(\"\"); // Réinitialiser le label\r\n\r\n            //Afficher que les données ont bien été sauvegardees\r\n            printTemporaryMessage(\"Candidature enregistrée ! \", 5);\r\n        } catch (NumberFormatException e) {\r\n            System.err.println(\"Erreur de conversion numérique : \" + e.getMessage());\r\n        }\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/controllers/CandidatureController.java b/src/main/java/controllers/CandidatureController.java
+--- a/src/main/java/controllers/CandidatureController.java	(revision b1623bf0c19751ea6f4e829e951c6adf8308d0ff)
++++ b/src/main/java/controllers/CandidatureController.java	(date 1702391393043)
+@@ -147,7 +147,7 @@
+     @FXML
+     private void onEnvoyerCandidatureButtonClick() {
+         try {
+-            // Récupérer les données des champs
++            // Recuperer les données des champs
+             String nom = nomField.getText();
+             String prenom = prenomField.getText();
+             double noteMoyenne = Double.parseDouble(noteMoyenneField.getText());
+@@ -163,13 +163,15 @@
+             // Calculer le score de la candidature
+             double scoreCandidature = (noteMoyenne + evaluationEnseignant1 + evaluationEnseignant2) / 3;
+ 
++            //Créer un objet candidature
++            //Candidature candidature = new Candidature(etudiant, bourse);
++
+             // Envoi des données à la base de données
+             Connection connexion = ConnexionJDBC.getConnexion();
+ 
+-            // Utilisez la connexion pour insérer les données dans la base de données
+-            // (Ajoutez votre logique d'insertion ici)
++            etudiant.insertIntoDatabase();
+ 
+-            // Fermer la connexion
++
+             ConnexionJDBC.fermerConnexion(connexion);
+ 
+             // Réinitialiser les champs de l'interface
+@@ -188,6 +190,7 @@
+ 
+             scoreLabel.setText(""); // Réinitialiser le label
+ 
++
+             //Afficher que les données ont bien été sauvegardees
+             printTemporaryMessage("Candidature enregistrée ! ", 5);
+         } catch (NumberFormatException e) {
+Index: src/main/java/models/Candidature.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package models;\r\n\r\nimport java.util.List;\r\n\r\npublic class Candidature {\r\n\r\n    private long id;\r\n    private Etudiant etudiant;\r\n    private Bourse bourse;\r\n    private List<Enseignement> planEnseignements;\r\n    private int evaluationEnseignant1;\r\n    private int evaluationEnseignant2;\r\n\r\n    public Candidature(long id, Etudiant etudiant, Bourse bourse, List<Enseignement> planEnseignements,\r\n                       int evaluationEnseignant1, int evaluationEnseignant2) {\r\n        this.id = id;\r\n        this.etudiant = etudiant;\r\n        this.bourse = bourse;\r\n        this.planEnseignements = planEnseignements;\r\n        this.evaluationEnseignant1 = evaluationEnseignant1;\r\n        this.evaluationEnseignant2 = evaluationEnseignant2;\r\n    }\r\n    public Candidature(Etudiant etudiant, Bourse bourse, int evaluationEnseignant1, int evaluationEnseignant2) {\r\n        this.etudiant = etudiant;\r\n        this.bourse = bourse;\r\n        this.evaluationEnseignant1 = evaluationEnseignant1;\r\n        this.evaluationEnseignant2 = evaluationEnseignant2;\r\n    }\r\n\r\n    // Getters et setters\r\n    public long getId() {\r\n        return id;\r\n    }\r\n\r\n    public void setId(long id) {\r\n        this.id = id;\r\n    }\r\n\r\n    public Etudiant getEtudiant() {\r\n        return etudiant;\r\n    }\r\n\r\n    public void setEtudiant(Etudiant etudiant) {\r\n        this.etudiant = etudiant;\r\n    }\r\n\r\n    public Bourse getBourse() {\r\n        return bourse;\r\n    }\r\n\r\n    public void setBourse(Bourse bourse) {\r\n        this.bourse = bourse;\r\n    }\r\n\r\n    public List<Enseignement> getPlanEnseignements() {\r\n        return planEnseignements;\r\n    }\r\n\r\n    public void setPlanEnseignements(List<Enseignement> planEnseignements) {\r\n        this.planEnseignements = planEnseignements;\r\n    }\r\n\r\n    public int getEvaluationEnseignant1() {\r\n        return evaluationEnseignant1;\r\n    }\r\n\r\n    public void setEvaluationEnseignant1(int evaluationEnseignant1) {\r\n        this.evaluationEnseignant1 = evaluationEnseignant1;\r\n    }\r\n\r\n    public int getEvaluationEnseignant2() {\r\n        return evaluationEnseignant2;\r\n    }\r\n\r\n    public void setEvaluationEnseignant2(int evaluationEnseignant2) {\r\n        this.evaluationEnseignant2 = evaluationEnseignant2;\r\n    }\r\n\r\n    public double calculerScoreCandidature() {\r\n        return (etudiant.getNoteMoyenne() + evaluationEnseignant1 + evaluationEnseignant2) / 3;\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"Candidature{\" +\r\n                \"id=\" + id +\r\n                \", etudiant=\" + etudiant +\r\n                \", bourse=\" + bourse +\r\n                \", planEnseignements=\" + planEnseignements +\r\n                \", evaluationEnseignant1=\" + evaluationEnseignant1 +\r\n                \", evaluationEnseignant2=\" + evaluationEnseignant2 +\r\n                '}';\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/models/Candidature.java b/src/main/java/models/Candidature.java
+--- a/src/main/java/models/Candidature.java	(revision b1623bf0c19751ea6f4e829e951c6adf8308d0ff)
++++ b/src/main/java/models/Candidature.java	(date 1702390849809)
+@@ -1,6 +1,10 @@
+ package models;
+ 
++import java.sql.Connection;
++import java.sql.PreparedStatement;
++import java.sql.SQLException;
+ import java.util.List;
++import java.util.stream.Collectors;
+ 
+ public class Candidature {
+ 
+@@ -27,6 +31,13 @@
+         this.evaluationEnseignant2 = evaluationEnseignant2;
+     }
+ 
++    public Candidature(Etudiant etudiant, Bourse bourse) {
++        this.etudiant = etudiant;
++        this.bourse = bourse;
++        this.evaluationEnseignant1 = 0;
++        this.evaluationEnseignant2 = 0;
++    }
++
+     // Getters et setters
+     public long getId() {
+         return id;
+@@ -79,6 +90,52 @@
+     public double calculerScoreCandidature() {
+         return (etudiant.getNoteMoyenne() + evaluationEnseignant1 + evaluationEnseignant2) / 3;
+     }
++    public void insertIntoDatabase() {
++        Connection connection = null;
++        PreparedStatement preparedStatement = null;
++
++        try {
++            // Get the database connection
++            connection = ConnexionJDBC.getConnexion();
++
++            // Prepare the SQL statement
++            String insertQuery = "INSERT INTO Candidature (id, etudiant_id, bourse_id, planEnseignements, " +
++                    "evaluationEnseignant1, evaluationEnseignant2) VALUES (?, ?, ?, ?, ?, ?)";
++            preparedStatement = connection.prepareStatement(insertQuery);
++
++            // Set the parameters
++            preparedStatement.setLong(1, id);
++            preparedStatement.setLong(2, etudiant.getId());
++            preparedStatement.setLong(3, bourse.getId());
++
++            // Convert the list of Enseignement to a comma-separated string
++            String planEnseignementsString = planEnseignements.stream()
++                    .map(Enseignement::getNom) // Assuming Enseignement has a 'getNom' method
++                    .collect(Collectors.joining(","));
++            preparedStatement.setString(4, planEnseignementsString);
++
++            preparedStatement.setInt(5, evaluationEnseignant1);
++            preparedStatement.setInt(6, evaluationEnseignant2);
++
++            // Execute the update
++            preparedStatement.executeUpdate();
++
++            System.out.println("Candidature inserted into the database successfully.");
++
++        } catch (SQLException e) {
++            e.printStackTrace();
++        } finally {
++            // Close resources
++            if (preparedStatement != null) {
++                try {
++                    preparedStatement.close();
++                } catch (SQLException e) {
++                    e.printStackTrace();
++                }
++            }
++            ConnexionJDBC.fermerConnexion(connection);
++        }
++    }
+ 
+     @Override
+     public String toString() {
+Index: src/main/java/models/Enseignant.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package models;\r\n\r\npublic class Enseignant {\r\n\r\n    private String nom;\r\n    private String prenom;\r\n\r\n    public Enseignant(String nom, String prenom) {\r\n        this.nom = nom;\r\n        this.prenom = prenom;\r\n    }\r\n\r\n    // Getters et setters\r\n    public String getNom() {\r\n        return nom;\r\n    }\r\n\r\n    public void setNom(String nom) {\r\n        this.nom = nom;\r\n    }\r\n\r\n    public String getPrenom() {\r\n        return prenom;\r\n    }\r\n\r\n    public void setPrenom(String prenom) {\r\n        this.prenom = prenom;\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"Enseignant{\" +\r\n                \"nom='\" + nom + '\\'' +\r\n                \", prenom='\" + prenom + '\\'' +\r\n                '}';\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/models/Enseignant.java b/src/main/java/models/Enseignant.java
+--- a/src/main/java/models/Enseignant.java	(revision b1623bf0c19751ea6f4e829e951c6adf8308d0ff)
++++ b/src/main/java/models/Enseignant.java	(date 1702389844455)
+@@ -1,5 +1,9 @@
+ package models;
+ 
++import java.sql.Connection;
++import java.sql.PreparedStatement;
++import java.sql.SQLException;
++
+ public class Enseignant {
+ 
+     private String nom;
+@@ -27,6 +31,42 @@
+         this.prenom = prenom;
+     }
+ 
++    public void insertIntoDatabase() {
++        Connection connection = null;
++        PreparedStatement preparedStatement = null;
++
++        try {
++            // Get the database connection
++            connection = ConnexionJDBC.getConnexion();
++
++            // Prepare the SQL statement
++            String insertQuery = "INSERT INTO Enseignant (nom, prenom) VALUES (?, ?)";
++            preparedStatement = connection.prepareStatement(insertQuery);
++
++            // Set the parameters
++            preparedStatement.setString(1, nom);
++            preparedStatement.setString(2, prenom);
++
++            // Execute the update
++            preparedStatement.executeUpdate();
++
++            System.out.println("Enseignant inserted into the database successfully.");
++
++        } catch (SQLException e) {
++            e.printStackTrace();
++        } finally {
++            // Close resources
++            if (preparedStatement != null) {
++                try {
++                    preparedStatement.close();
++                } catch (SQLException e) {
++                    e.printStackTrace();
++                }
++            }
++            ConnexionJDBC.fermerConnexion(connection);
++        }
++    }
++
+     @Override
+     public String toString() {
+         return "Enseignant{" +
+Index: src/main/java/models/Enseignement.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package models;\r\n\r\npublic class Enseignement {\r\n\r\n    private long id;\r\n    private String nom;\r\n    private int credits;\r\n    private int volumeHoraire;\r\n\r\n    public Enseignement(long id, String nom, int credits, int volumeHoraire) {\r\n        this.id = id;\r\n        this.nom = nom;\r\n        this.credits = credits;\r\n        this.volumeHoraire = volumeHoraire;\r\n    }\r\n\r\n    // Getters et setters\r\n    public long getId() {\r\n        return id;\r\n    }\r\n\r\n    public void setId(long id) {\r\n        this.id = id;\r\n    }\r\n\r\n    public String getNom() {\r\n        return nom;\r\n    }\r\n\r\n    public void setNom(String nom) {\r\n        this.nom = nom;\r\n    }\r\n\r\n    public int getCredits() {\r\n        return credits;\r\n    }\r\n\r\n    public void setCredits(int credits) {\r\n        this.credits = credits;\r\n    }\r\n\r\n    public int getVolumeHoraire() {\r\n        return volumeHoraire;\r\n    }\r\n\r\n    public void setVolumeHoraire(int volumeHoraire) {\r\n        this.volumeHoraire = volumeHoraire;\r\n    }\r\n\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"Enseignement{\" +\r\n                \"id=\" + id +\r\n                \", nom='\" + nom + '\\'' +\r\n                \", credits=\" + credits +\r\n                \", volumeHoraire=\" + volumeHoraire +\r\n                '}';\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/models/Enseignement.java b/src/main/java/models/Enseignement.java
+--- a/src/main/java/models/Enseignement.java	(revision b1623bf0c19751ea6f4e829e951c6adf8308d0ff)
++++ b/src/main/java/models/Enseignement.java	(date 1702389804508)
+@@ -1,4 +1,7 @@
+ package models;
++import java.sql.Connection;
++import java.sql.PreparedStatement;
++import java.sql.SQLException;
+ 
+ public class Enseignement {
+ 
+@@ -48,6 +51,44 @@
+     }
+ 
+ 
++    public void insertIntoDatabase() {
++        Connection connection = null;
++        PreparedStatement preparedStatement = null;
++
++        try {
++            // Get the database connection
++            connection = ConnexionJDBC.getConnexion();
++
++            // Prepare the SQL statement
++            String insertQuery = "INSERT INTO Enseignement (id, nom, credits, volumeHoraire) VALUES (?, ?, ?, ?)";
++            preparedStatement = connection.prepareStatement(insertQuery);
++
++            // Set the parameters
++            preparedStatement.setLong(1, id);
++            preparedStatement.setString(2, nom);
++            preparedStatement.setInt(3, credits);
++            preparedStatement.setInt(4, volumeHoraire);
++
++            // Execute the update
++            preparedStatement.executeUpdate();
++
++            System.out.println("Enseignement inserted into the database successfully.");
++
++        } catch (SQLException e) {
++            e.printStackTrace();
++        } finally {
++            // Close resources
++            if (preparedStatement != null) {
++                try {
++                    preparedStatement.close();
++                } catch (SQLException e) {
++                    e.printStackTrace();
++                }
++            }
++            ConnexionJDBC.fermerConnexion(connection);
++        }
++    }
++
+     @Override
+     public String toString() {
+         return "Enseignement{" +
+Index: src/main/java/models/Etudiant.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package models;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\n\r\npublic class Etudiant {\r\n    private Long id;\r\n\r\n    private String nom;\r\n    private String prenom;\r\n\r\n    private int numeroEtudiant;\r\n\r\n    private double noteMoyenne;\r\n\r\n    private List<Bourse> candidatures = new ArrayList<>();\r\n\r\n\r\n    public Long getId() {\r\n        return id;\r\n    }\r\n\r\n    public void setId(Long id) {\r\n        this.id = id;\r\n    }\r\n\r\n    public String getNom() {\r\n        return nom;\r\n    }\r\n\r\n    public void setNom(String nom) {\r\n        this.nom = nom;\r\n    }\r\n\r\n    public String getPrenom() {\r\n        return prenom;\r\n    }\r\n\r\n    public void setPrenom(String prenom) {\r\n        this.prenom = prenom;\r\n    }\r\n\r\n    public int getNumeroEtudiant() {\r\n        return numeroEtudiant;\r\n    }\r\n\r\n    public void setNumeroEtudiant(int numeroEtudiant) {\r\n        this.numeroEtudiant = numeroEtudiant;\r\n    }\r\n\r\n    public double getNoteMoyenne() {\r\n        return noteMoyenne;\r\n    }\r\n\r\n    public void setNoteMoyenne(double noteMoyenne) {\r\n        this.noteMoyenne = noteMoyenne;\r\n    }\r\n\r\n    public List<Bourse> getCandidatures() {\r\n        return candidatures;\r\n    }\r\n\r\n    public void setCandidatures(List<Bourse> candidatures) {\r\n        this.candidatures = candidatures;\r\n    }\r\n}\r\n//Pour les étudiants qui demandent une bourse, on veut connaitre leur nom, prénom, numéro\r\n//étudiant, note moyenne du dernier semestre validé.
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/models/Etudiant.java b/src/main/java/models/Etudiant.java
+--- a/src/main/java/models/Etudiant.java	(revision b1623bf0c19751ea6f4e829e951c6adf8308d0ff)
++++ b/src/main/java/models/Etudiant.java	(date 1702389874036)
+@@ -1,5 +1,8 @@
+ package models;
+ 
++import java.sql.Connection;
++import java.sql.PreparedStatement;
++import java.sql.SQLException;
+ import java.util.ArrayList;
+ import java.util.List;
+ 
+@@ -63,6 +66,45 @@
+     public void setCandidatures(List<Bourse> candidatures) {
+         this.candidatures = candidatures;
+     }
++
++    public void insertIntoDatabase() {
++        Connection connection = null;
++        PreparedStatement preparedStatement = null;
++
++        try {
++            // Get the database connection
++            connection = ConnexionJDBC.getConnexion();
++
++            // Prepare the SQL statement
++            String insertQuery = "INSERT INTO Etudiant (id, nom, prenom, numeroEtudiant, noteMoyenne) VALUES (?, ?, ?, ?, ?)";
++            preparedStatement = connection.prepareStatement(insertQuery);
++
++            // Set the parameters
++            preparedStatement.setLong(1, id);
++            preparedStatement.setString(2, nom);
++            preparedStatement.setString(3, prenom);
++            preparedStatement.setInt(4, numeroEtudiant);
++            preparedStatement.setDouble(5, noteMoyenne);
++
++            // Execute the update
++            preparedStatement.executeUpdate();
++
++            System.out.println("Etudiant inserted into the database successfully.");
++
++        } catch (SQLException e) {
++            e.printStackTrace();
++        } finally {
++            // Close resources
++            if (preparedStatement != null) {
++                try {
++                    preparedStatement.close();
++                } catch (SQLException e) {
++                    e.printStackTrace();
++                }
++            }
++            ConnexionJDBC.fermerConnexion(connection);
++        }
++    }
+ }
+ //Pour les étudiants qui demandent une bourse, on veut connaitre leur nom, prénom, numéro
+ //étudiant, note moyenne du dernier semestre validé.
+\ No newline at end of file

@@ -1,6 +1,10 @@
 package models;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Candidature {
 
@@ -20,11 +24,19 @@ public class Candidature {
         this.evaluationEnseignant1 = evaluationEnseignant1;
         this.evaluationEnseignant2 = evaluationEnseignant2;
     }
-    public Candidature(Etudiant etudiant, Bourse bourse, int evaluationEnseignant1, int evaluationEnseignant2) {
+    public Candidature(Etudiant etudiant, Bourse bourse, List<Enseignement> planEnseignements, int evaluationEnseignant1, int evaluationEnseignant2) {
         this.etudiant = etudiant;
         this.bourse = bourse;
+        this.planEnseignements = planEnseignements;
         this.evaluationEnseignant1 = evaluationEnseignant1;
         this.evaluationEnseignant2 = evaluationEnseignant2;
+    }
+
+    public Candidature(Etudiant etudiant, Bourse bourse) {
+        this.etudiant = etudiant;
+        this.bourse = bourse;
+        this.evaluationEnseignant1 = 0;
+        this.evaluationEnseignant2 = 0;
     }
 
     // Getters et setters
@@ -78,6 +90,52 @@ public class Candidature {
 
     public double calculerScoreCandidature() {
         return (etudiant.getNoteMoyenne() + evaluationEnseignant1 + evaluationEnseignant2) / 3;
+    }
+    public void insertIntoDatabase() {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            // Get the database connection
+            connection = ConnexionJDBC.obtenirConnexion();
+
+            // Prepare the SQL statement
+            String insertQuery = "INSERT INTO Candidature (id, etudiant_id, bourse_id, planEnseignements, " +
+                    "evaluationEnseignant1, evaluationEnseignant2) VALUES (?, ?, ?, ?, ?, ?)";
+            preparedStatement = connection.prepareStatement(insertQuery);
+
+            // Set the parameters
+            preparedStatement.setLong(1, id);
+            preparedStatement.setLong(2, etudiant.getId());
+            preparedStatement.setLong(3, bourse.getId());
+
+            // Convert the list of Enseignement to a comma-separated string
+            String planEnseignementsString = planEnseignements.stream()
+                    .map(Enseignement::getNom) // Assuming Enseignement has a 'getNom' method
+                    .collect(Collectors.joining(","));
+            preparedStatement.setString(4, planEnseignementsString);
+
+            preparedStatement.setInt(5, evaluationEnseignant1);
+            preparedStatement.setInt(6, evaluationEnseignant2);
+
+            // Execute the update
+            preparedStatement.executeUpdate();
+
+            System.out.println("Candidature inserted into the database successfully.");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // Close resources
+            if (preparedStatement != null) {
+                try {
+                    preparedStatement.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            ConnexionJDBC.fermerConnexion(connection);
+        }
     }
 
     @Override
