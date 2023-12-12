@@ -7,10 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
-import models.Bourse;
-import models.Candidature;
-import models.ConnexionJDBC;
-import models.Etudiant;
+import models.*;
 
 import java.sql.Connection;
 import java.util.ArrayList;
@@ -102,7 +99,6 @@ public class CandidatureController {
     private void onCalculScoreButtonClick() {
     try {
 
-
         // Récupérer les données des champs
         String nom = nomField.getText();
         String prenom = prenomField.getText();
@@ -130,11 +126,11 @@ public class CandidatureController {
     }
     }
 
-    private Candidature createCandidature(Etudiant etudiant, int numeroBourse) {
+    private Candidature createCandidature(Etudiant etudiant, int numeroBourse, List<Enseignement> planEnseignements) {
         // Créer et retourner une instance de Candidature avec les données nécessaires
         // (Vous devrez ajuster cela selon la structure de votre application)
         // Assumez que vous avez une classe Bourse qui peut être initialisée avec un numéro.
-        return new Candidature(etudiant, new Bourse(numeroBourse), evaluationEnseignant1, evaluationEnseignant2);
+        return new Candidature(etudiant, new Bourse(numeroBourse),planEnseignements, evaluationEnseignant1, evaluationEnseignant2);
     }
 
     private void printTemporaryMessage(String message, int dureeEnSecondes){
@@ -159,12 +155,16 @@ public class CandidatureController {
             etudiant.setNom(nom);
             etudiant.setPrenom(prenom);
             etudiant.setNoteMoyenne(noteMoyenne);
+            List<Enseignement> planEnseignements = new ArrayList<>();
+
+            Candidature canditaure = createCandidature(etudiant, 1, planEnseignements);
+            //Bourse bourse = new Bourse();
 
             // Calculer le score de la candidature
             double scoreCandidature = (noteMoyenne + evaluationEnseignant1 + evaluationEnseignant2) / 3;
 
             //Créer un objet candidature
-            //Candidature candidature = new Candidature(etudiant, bourse);
+
 
             // Envoi des données à la base de données
             Connection connexion = ConnexionJDBC.obtenirConnexion();
@@ -186,7 +186,6 @@ public class CandidatureController {
             bourse2Checkbox.setSelected(false);
             bourse3Checkbox.setSelected(false);
             bourse4Checkbox.setSelected(false);
-
 
             scoreLabel.setText(""); // Réinitialiser le label
 

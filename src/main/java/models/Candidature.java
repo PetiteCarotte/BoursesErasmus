@@ -24,9 +24,10 @@ public class Candidature {
         this.evaluationEnseignant1 = evaluationEnseignant1;
         this.evaluationEnseignant2 = evaluationEnseignant2;
     }
-    public Candidature(Etudiant etudiant, Bourse bourse, int evaluationEnseignant1, int evaluationEnseignant2) {
+    public Candidature(Etudiant etudiant, Bourse bourse, List<Enseignement> planEnseignements, int evaluationEnseignant1, int evaluationEnseignant2) {
         this.etudiant = etudiant;
         this.bourse = bourse;
+        this.planEnseignements = planEnseignements;
         this.evaluationEnseignant1 = evaluationEnseignant1;
         this.evaluationEnseignant2 = evaluationEnseignant2;
     }
@@ -96,7 +97,7 @@ public class Candidature {
 
         try {
             // Get the database connection
-            connection = ConnexionJDBC.getConnexion();
+            connection = ConnexionJDBC.obtenirConnexion();
 
             // Prepare the SQL statement
             String insertQuery = "INSERT INTO Candidature (id, etudiant_id, bourse_id, planEnseignements, " +

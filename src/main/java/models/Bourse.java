@@ -12,8 +12,7 @@ public class Bourse {
     private String responsableLocal;
 
     // Constructeur
-    public Bourse(long id, String destination, int postesDisponibles, String responsableLocal) {
-        this.id = id;
+    public Bourse(String destination, int postesDisponibles, String responsableLocal) {
         this.destination = destination;
         this.postesDisponibles = postesDisponibles;
         this.responsableLocal = responsableLocal;
@@ -61,7 +60,7 @@ public class Bourse {
 
         try {
             // Get the database connection
-            connection = ConnexionJDBC.getConnexion();
+            connection = ConnexionJDBC.obtenirConnexion();
 
             // Prepare the SQL statement
             String insertQuery = "INSERT INTO Bourse (id, destination, postesDisponibles, responsableLocal) VALUES (?, ?, ?, ?)";

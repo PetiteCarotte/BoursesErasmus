@@ -57,7 +57,7 @@ public class Enseignement {
 
         try {
             // Get the database connection
-            connection = ConnexionJDBC.getConnexion();
+            connection = ConnexionJDBC.obtenirConnexion();
 
             // Prepare the SQL statement
             String insertQuery = "INSERT INTO Enseignement (id, nom, credits, volumeHoraire) VALUES (?, ?, ?, ?)";
