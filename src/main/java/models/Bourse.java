@@ -2,10 +2,10 @@ package models;
 
 public class Bourse {
 
-    private long id;
-    private String destination;
-    private int postesDisponibles;
-    private String responsableLocal;
+        private long id;
+        private String destination;
+        private int postesDisponibles;
+        private String responsableLocal;
 
     // Constructeur
     public Bourse(long id, String destination, int postesDisponibles, String responsableLocal) {

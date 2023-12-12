@@ -164,7 +164,7 @@ public class CandidatureController {
             double scoreCandidature = (noteMoyenne + evaluationEnseignant1 + evaluationEnseignant2) / 3;
 
             // Envoi des données à la base de données
-            Connection connexion = ConnexionJDBC.obtenirConnexion();
+            Connection connexion = ConnexionJDBC.getConnexion();
 
             // Utilisez la connexion pour insérer les données dans la base de données
             // (Ajoutez votre logique d'insertion ici)
