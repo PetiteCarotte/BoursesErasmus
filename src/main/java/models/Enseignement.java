@@ -63,52 +63,14 @@ public class Enseignement {
             connection = ConnexionJDBC.getConnexion();
 
             // Prepare the SQL statement
-            String insertQuery = "INSERT INTO Enseignement (id, nom, credits, volumeHoraire) VALUES (?, ?, ?, ?)";
+            String insertQuery = "INSERT INTO Enseignement (nom, credits, volumeHoraire) VALUES ( ?, ?, ?)";
             preparedStatement = connection.prepareStatement(insertQuery);
 
             // Set the parameters
-            preparedStatement.setLong(1, id);
-            preparedStatement.setString(2, nom);
-            preparedStatement.setInt(3, credits);
-            preparedStatement.setInt(4, volumeHoraire);
-
-            // Execute the update
-            preparedStatement.executeUpdate();
-
-            System.out.println("Enseignement inserted into the database successfully.");
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            // Close resources
-            if (preparedStatement != null) {
-                try {
-                    preparedStatement.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-            ConnexionJDBC.fermerConnexion(connection);
-        }
-    }
-
-    public void insertIntoDatabase() {
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-
-        try {
-            // Get the database connection
-            connection = ConnexionJDBC.obtenirConnexion();
-
-            // Prepare the SQL statement
-            String insertQuery = "INSERT INTO Enseignement (id, nom, credits, volumeHoraire) VALUES (?, ?, ?, ?)";
-            preparedStatement = connection.prepareStatement(insertQuery);
-
-            // Set the parameters
-            preparedStatement.setLong(1, id);
-            preparedStatement.setString(2, nom);
-            preparedStatement.setInt(3, credits);
-            preparedStatement.setInt(4, volumeHoraire);
+            //preparedStatement.setLong(1, id);
+            preparedStatement.setString(1, nom);
+            preparedStatement.setInt(2, credits);
+            preparedStatement.setInt(3, volumeHoraire);
 
             // Execute the update
             preparedStatement.executeUpdate();

@@ -22,7 +22,7 @@ public class ConnexionJDBC {
 
             // Création de la table Bourse
             String createBourseTable = "CREATE TABLE Bourse (" +
-                    "id BIGINT PRIMARY KEY," +
+                    "id BIGINT PRIMARY KEY AUTO_INCREMENT," +
                     "destination VARCHAR(255)," +
                     "postesDisponibles INT," +
                     "responsableLocal VARCHAR(255)" +
