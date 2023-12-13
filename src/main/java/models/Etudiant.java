@@ -2,6 +2,9 @@ package models;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class Etudiant {
     private Long id;
@@ -9,7 +12,7 @@ public class Etudiant {
     private String nom;
     private String prenom;
 
-    private int numeroEtudiant;
+    private double numeroEtudiant;
 
     private double noteMoyenne;
 
@@ -40,11 +43,11 @@ public class Etudiant {
         this.prenom = prenom;
     }
 
-    public int getNumeroEtudiant() {
+    public double getNumeroEtudiant() {
         return numeroEtudiant;
     }
 
-    public void setNumeroEtudiant(int numeroEtudiant) {
+    public void setNumeroEtudiant(double numeroEtudiant) {
         this.numeroEtudiant = numeroEtudiant;
     }
 
@@ -63,6 +66,43 @@ public class Etudiant {
     public void setCandidatures(List<Bourse> candidatures) {
         this.candidatures = candidatures;
     }
+
+    public void insertIntoDatabase() {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            // Get the database connection
+            connection = ConnexionJDBC.getConnexion();
+
+            // Prepare the SQL statement
+            String insertQuery = "INSERT INTO Etudiant ( nom, prenom, numeroEtudiant, noteMoyenne) VALUES ( ?, ?, ?, ?)";
+            preparedStatement = connection.prepareStatement(insertQuery);
+
+            // Set the parameters
+            //preparedStatement.setLong(1, id);
+            preparedStatement.setString(1, nom);
+            preparedStatement.setString(2, prenom);
+            preparedStatement.setDouble(3, numeroEtudiant);
+            preparedStatement.setDouble(4, noteMoyenne);
+
+            // Execute the update
+            preparedStatement.executeUpdate();
+
+            System.out.println("Etudiant inserted into the database successfully.");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // Close resources
+            if (preparedStatement != null) {
+                try {
+                    preparedStatement.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            ConnexionJDBC.fermerConnexion(connection);
+        }
+    }
 }
-//Pour les étudiants qui demandent une bourse, on veut connaitre leur nom, prénom, numéro
-//étudiant, note moyenne du dernier semestre validé.

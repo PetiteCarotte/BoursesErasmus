@@ -1,10 +1,7 @@
 package controllers;
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 import models.Bourse;
@@ -23,6 +20,9 @@ public class CandidatureController {
 
     @FXML
     private TextField prenomField;
+
+    @FXML
+    private TextField numEtuField;
 
     @FXML
     private CheckBox bourse1Checkbox;
@@ -46,9 +46,6 @@ public class CandidatureController {
     private TextField noteEnseignant2Field;
 
     @FXML
-    private Button calculScoreButton;
-
-    @FXML
     private Label scoreLabel;
 
     @FXML
@@ -57,7 +54,26 @@ public class CandidatureController {
     @FXML
     private Label checkBoxLabel;
 
+    @FXML
+    private Label etuLabel;
+
+    @FXML
+    private Label boursesLabel;
+
+    @FXML
+    private Label EnvoiLabel;
+
+    @FXML
+    private ComboBox ChoixEnsei1;
+    @FXML
+    private ComboBox ChoixEnsei2;
+    @FXML
+    private ComboBox ChoixEnsei3;
+    @FXML
+    private ComboBox ChoixEnsei4;
+
     private Etudiant etudiant;
+    private Candidature candidature;
 
     private int evaluationEnseignant1;
     private int evaluationEnseignant2;
@@ -71,12 +87,10 @@ public class CandidatureController {
         addListenerCheckBox(bourse1Checkbox);
         addListenerCheckBox(bourse2Checkbox);
         addListenerCheckBox(bourse3Checkbox);
-        addListenerCheckBox(bourse4Checkbox);
     }
 
     private void addListenerCheckBox(CheckBox checkBox) {
         checkBox.selectedProperty().addListener((observable, oldValue, newValue) -> {
-            // Mettre à jour le message
             update();
         });
     }
@@ -88,7 +102,6 @@ public class CandidatureController {
         if (bourse1Checkbox.isSelected()) nombreBoursesSelectionnees++;
         if (bourse2Checkbox.isSelected()) nombreBoursesSelectionnees++;
         if (bourse3Checkbox.isSelected()) nombreBoursesSelectionnees++;
-        if (bourse4Checkbox.isSelected()) nombreBoursesSelectionnees++;
 
         // Afficher le message uniquement si le nombre dépasse le seuil
         if (nombreBoursesSelectionnees > seuilBoursesSelectionnees) {
@@ -96,38 +109,6 @@ public class CandidatureController {
         } else {
             checkBoxLabel.setText("");
         }
-    }
-
-    @FXML
-    private void onCalculScoreButtonClick() {
-    try {
-
-
-        // Récupérer les données des champs
-        String nom = nomField.getText();
-        String prenom = prenomField.getText();
-        double noteMoyenne = Double.parseDouble(noteMoyenneField.getText());
-        int evaluationEnseignant1 = Integer.parseInt(noteEnseignant1Field.getText());
-        int evaluationEnseignant2 = Integer.parseInt(noteEnseignant2Field.getText());
-
-        // Créer un objet Etudiant
-        etudiant = new Etudiant();
-        etudiant.setNom(nom);
-        etudiant.setPrenom(prenom);
-        etudiant.setNoteMoyenne(noteMoyenne);
-
-        // Calculer le score de la candidature
-        double scoreCandidature = (noteMoyenne + evaluationEnseignant1 + evaluationEnseignant2) / 3;
-
-        System.out.println("Note moyenne : " + noteMoyenneField.getText());
-        System.out.println("Note enseignant 1 : " + noteEnseignant1Field.getText());
-        System.out.println("Note enseignant 2 : " + noteEnseignant2Field.getText());
-
-        // Afficher le résultat
-        scoreLabel.setText("Score : " + scoreCandidature);
-    }catch(Exception e){
-        e.printStackTrace();
-    }
     }
 
     private Candidature createCandidature(Etudiant etudiant, int numeroBourse) {
@@ -138,9 +119,9 @@ public class CandidatureController {
     }
 
     private void printTemporaryMessage(String message, int dureeEnSecondes){
-        sendLabel.setText(message);
+        etuLabel.setText(message);
         PauseTransition pause = new PauseTransition(Duration.seconds(dureeEnSecondes));
-        pause.setOnFinished(event -> sendLabel.setText(""));
+        pause.setOnFinished(event -> etuLabel.setText(""));
         pause.play();
     }
 
@@ -150,21 +131,29 @@ public class CandidatureController {
             // Récupérer les données des champs
             String nom = nomField.getText();
             String prenom = prenomField.getText();
+            double numeroEtu = Double.parseDouble(numEtuField.getText());
             double noteMoyenne = Double.parseDouble(noteMoyenneField.getText());
-            evaluationEnseignant1 = Integer.parseInt(noteEnseignant1Field.getText());
-            evaluationEnseignant2 = Integer.parseInt(noteEnseignant2Field.getText());
+
 
             // Créer un objet Etudiant
             etudiant = new Etudiant();
+            //etudiant.setId(Long.valueOf(1));
             etudiant.setNom(nom);
             etudiant.setPrenom(prenom);
+            etudiant.setNumeroEtudiant(numeroEtu);
             etudiant.setNoteMoyenne(noteMoyenne);
 
+            Connection connexion = ConnexionJDBC.getConnexion();
+
+            etudiant.insertIntoDatabase();
+
+            ConnexionJDBC.fermerConnexion(connexion);
+            /*
             // Calculer le score de la candidature
             double scoreCandidature = (noteMoyenne + evaluationEnseignant1 + evaluationEnseignant2) / 3;
 
             // Envoi des données à la base de données
-            Connection connexion = ConnexionJDBC.obtenirConnexion();
+            Connection connexion = ConnexionJDBC.getConnexion();
 
             // Utilisez la connexion pour insérer les données dans la base de données
             // (Ajoutez votre logique d'insertion ici)
@@ -186,7 +175,7 @@ public class CandidatureController {
             bourse4Checkbox.setSelected(false);
 
 
-            scoreLabel.setText(""); // Réinitialiser le label
+            scoreLabel.setText(""); // Réinitialiser le label*/
 
             //Afficher que les données ont bien été sauvegardees
             printTemporaryMessage("Candidature enregistrée ! ", 5);
@@ -195,4 +184,44 @@ public class CandidatureController {
         }
     }
 
+    @FXML
+    private void onCalculScoreButtonClick() {
+        try {
+            // Récupérer les données des champs
+            double noteMoyenne = Double.parseDouble(noteMoyenneField.getText());
+            int evaluationEnseignant1 = Integer.parseInt(noteEnseignant1Field.getText());
+            int evaluationEnseignant2 = Integer.parseInt(noteEnseignant2Field.getText());
+
+            candidature = new Candidature();
+            candidature.setEvaluationEnseignant1(evaluationEnseignant1);
+            candidature.setEvaluationEnseignant2(evaluationEnseignant2);
+
+            Connection connexion = ConnexionJDBC.getConnexion();
+
+            candidature.insertIntoDatabase();
+
+            ConnexionJDBC.fermerConnexion(connexion);
+
+            // Calculer le score de la candidature
+            double scoreCandidature = (noteMoyenne + evaluationEnseignant1 + evaluationEnseignant2) / 3;
+
+            System.out.println("Note moyenne : " + noteMoyenneField.getText());
+            System.out.println("Note enseignant 1 : " + noteEnseignant1Field.getText());
+            System.out.println("Note enseignant 2 : " + noteEnseignant2Field.getText());
+
+            // Afficher le résultat
+            scoreLabel.setText("Score : " + scoreCandidature);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void onEnvoyerChoixBoursesButtonClick(){
+
+    }
+    @FXML
+    private void onFinalizeButtonClick(){
+
+    }
 }

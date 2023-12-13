@@ -10,8 +10,8 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("erasmus.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 640, 400);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("erasmuV2.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 640, 397);
         stage.setTitle("Bourses Erasmus!");
         stage.setScene(scene);
         stage.show();

@@ -1,5 +1,9 @@
 package models;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 public class Bourse {
 
     private long id;
@@ -51,8 +55,43 @@ public class Bourse {
         this.responsableLocal = responsableLocal;
     }
 
-    // Autres methodes si necessaire
+    public void insertIntoDatabase() {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
 
+        try {
+            // Get the database connection
+            connection = ConnexionJDBC.getConnexion();
+
+            // Prepare the SQL statement
+            String insertQuery = "INSERT INTO Bourse ( destination, postesDisponibles, responsableLocal) VALUES (?, ?, ?, ?)";
+            preparedStatement = connection.prepareStatement(insertQuery);
+
+            // Set the parameters
+
+            preparedStatement.setString(1, destination);
+            preparedStatement.setInt(2, postesDisponibles);
+            preparedStatement.setString(3, responsableLocal);
+
+            // Execute the update
+            preparedStatement.executeUpdate();
+
+            System.out.println("Bourse inserted into the database successfully.");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // Close resources
+            if (preparedStatement != null) {
+                try {
+                    preparedStatement.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            ConnexionJDBC.fermerConnexion(connection);
+        }
+    }
     @Override
     public String toString() {
         return "Bourse{" +
