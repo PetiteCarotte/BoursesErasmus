@@ -1,19 +1,14 @@
 package models;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
 public class Bourse {
 
-    private long id;
-    private String destination;
-    private int postesDisponibles;
-    private String responsableLocal;
+        private long id;
+        private String destination;
+        private int postesDisponibles;
+        private String responsableLocal;
 
     // Constructeur
-    public Bourse(long id, String destination, int postesDisponibles, String responsableLocal) {
-        this.id = id;
+    public Bourse(String destination, int postesDisponibles, String responsableLocal) {
         this.destination = destination;
         this.postesDisponibles = postesDisponibles;
         this.responsableLocal = responsableLocal;
@@ -61,17 +56,37 @@ public class Bourse {
 
         try {
             // Get the database connection
-            connection = ConnexionJDBC.getConnexion();
+            connection = ConnexionJDBC.obtenirConnexion();
 
             // Prepare the SQL statement
-            String insertQuery = "INSERT INTO Bourse ( destination, postesDisponibles, responsableLocal) VALUES (?, ?, ?, ?)";
+            String insertQuery = "INSERT INTO Bourse (id, destination, postesDisponibles, responsableLocal) VALUES (?, ?, ?, ?)";
             preparedStatement = connection.prepareStatement(insertQuery);
 
             // Set the parameters
+            preparedStatement.setLong(1, id);
+            preparedStatement.setString(2, destination);
+            preparedStatement.setInt(3, postesDisponibles);
+            preparedStatement.setString(4, responsableLocal);
 
-            preparedStatement.setString(1, destination);
-            preparedStatement.setInt(2, postesDisponibles);
-            preparedStatement.setString(3, responsableLocal);
+            // Execute the update
+            preparedStatement.executeUpdate();
+
+            System.out.println("Bourse inserted into the database successfully.");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // Close resources
+            if (preparedStatement != null) {
+                try {
+                    preparedStatement.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            ConnexionJDBC.fermerConnexion(connection);
+        }
+    }
 
             // Execute the update
             preparedStatement.executeUpdate();

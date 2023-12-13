@@ -4,10 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
-import models.Bourse;
-import models.Candidature;
-import models.ConnexionJDBC;
-import models.Etudiant;
+import models.*;
 
 import java.sql.Connection;
 import java.util.ArrayList;
@@ -20,9 +17,6 @@ public class CandidatureController {
 
     @FXML
     private TextField prenomField;
-
-    @FXML
-    private TextField numEtuField;
 
     @FXML
     private CheckBox bourse1Checkbox;
@@ -142,6 +136,10 @@ public class CandidatureController {
             etudiant.setPrenom(prenom);
             etudiant.setNumeroEtudiant(numeroEtu);
             etudiant.setNoteMoyenne(noteMoyenne);
+            List<Enseignement> planEnseignements = new ArrayList<>();
+
+            Candidature canditaure = createCandidature(etudiant, 1, planEnseignements);
+            //Bourse bourse = new Bourse();
 
             Connection connexion = ConnexionJDBC.getConnexion();
 
@@ -152,14 +150,16 @@ public class CandidatureController {
             // Calculer le score de la candidature
             double scoreCandidature = (noteMoyenne + evaluationEnseignant1 + evaluationEnseignant2) / 3;
 
+            //Créer un objet candidature
+
+
             // Envoi des données à la base de données
-            Connection connexion = ConnexionJDBC.getConnexion();
+            //Connection connexion = ConnexionJDBC.getConnexion();
 
-            // Utilisez la connexion pour insérer les données dans la base de données
-            // (Ajoutez votre logique d'insertion ici)
+            //etudiant.insertIntoDatabase();
 
-            // Fermer la connexion
-            ConnexionJDBC.fermerConnexion(connexion);
+
+            //ConnexionJDBC.fermerConnexion(connexion);
 
             // Réinitialiser les champs de l'interface
             nomField.clear();

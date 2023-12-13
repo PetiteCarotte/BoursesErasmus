@@ -47,7 +47,7 @@ public class Etudiant {
         return numeroEtudiant;
     }
 
-    public void setNumeroEtudiant(double numeroEtudiant) {
+    public void setNumeroEtudiant(int numeroEtudiant) {
         this.numeroEtudiant = numeroEtudiant;
     }
 
@@ -106,3 +106,5 @@ public class Etudiant {
         }
     }
 }
+//Pour les étudiants qui demandent une bourse, on veut connaitre leur nom, prénom, numéro
+//étudiant, note moyenne du dernier semestre validé.
