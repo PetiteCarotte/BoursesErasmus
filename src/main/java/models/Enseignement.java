@@ -3,6 +3,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 public class Enseignement {
 
     private long id;
@@ -50,24 +54,23 @@ public class Enseignement {
         this.volumeHoraire = volumeHoraire;
     }
 
-
     public void insertIntoDatabase() {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
         try {
             // Get the database connection
-            connection = ConnexionJDBC.obtenirConnexion();
+            connection = ConnexionJDBC.getConnexion();
 
             // Prepare the SQL statement
-            String insertQuery = "INSERT INTO Enseignement (id, nom, credits, volumeHoraire) VALUES (?, ?, ?, ?)";
+            String insertQuery = "INSERT INTO Enseignement (nom, credits, volumeHoraire) VALUES ( ?, ?, ?)";
             preparedStatement = connection.prepareStatement(insertQuery);
 
             // Set the parameters
-            preparedStatement.setLong(1, id);
-            preparedStatement.setString(2, nom);
-            preparedStatement.setInt(3, credits);
-            preparedStatement.setInt(4, volumeHoraire);
+            //preparedStatement.setLong(1, id);
+            preparedStatement.setString(1, nom);
+            preparedStatement.setInt(2, credits);
+            preparedStatement.setInt(3, volumeHoraire);
 
             // Execute the update
             preparedStatement.executeUpdate();

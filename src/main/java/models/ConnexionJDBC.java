@@ -22,7 +22,7 @@ public class ConnexionJDBC {
 
             // Création de la table Bourse
             String createBourseTable = "CREATE TABLE Bourse (" +
-                    "id BIGINT PRIMARY KEY," +
+                    "id BIGINT PRIMARY KEY AUTO_INCREMENT," +
                     "destination VARCHAR(255)," +
                     "postesDisponibles INT," +
                     "responsableLocal VARCHAR(255)" +
@@ -48,7 +48,7 @@ public class ConnexionJDBC {
 
             // Création de la table Etudiant
             String createEtudiantTable = "CREATE TABLE Etudiant (" +
-                    "id BIGINT PRIMARY KEY," +
+                    "id BIGINT PRIMARY KEY AUTO_INCREMENT," +
                     "nom VARCHAR(255)," +
                     "prenom VARCHAR(255)," +
                     "numeroEtudiant INT," +
@@ -59,7 +59,7 @@ public class ConnexionJDBC {
 
             // Création de la table Candidature
             String createCandidatureTable = "CREATE TABLE Candidature (" +
-                    "id BIGINT PRIMARY KEY," +
+                    "id BIGINT PRIMARY KEY AUTO_INCREMENT," +
                     "etudiant_id BIGINT," +
                     "bourse_id BIGINT," +
                     "evaluationEnseignant1 INT," +

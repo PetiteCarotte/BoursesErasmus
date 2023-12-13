@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+
 public class Bourse {
 
         private long id;
@@ -19,6 +20,10 @@ public class Bourse {
     }
     public Bourse(long id) {
         this.id = id;
+    }
+
+    public Bourse() {
+
     }
 
     // Getters et setters
@@ -60,17 +65,17 @@ public class Bourse {
 
         try {
             // Get the database connection
-            connection = ConnexionJDBC.obtenirConnexion();
+            connection = ConnexionJDBC.getConnexion();
 
             // Prepare the SQL statement
-            String insertQuery = "INSERT INTO Bourse (id, destination, postesDisponibles, responsableLocal) VALUES (?, ?, ?, ?)";
+            String insertQuery = "INSERT INTO Bourse ( destination, postesDisponibles, responsableLocal) VALUES ( ?, ?, ?)";
             preparedStatement = connection.prepareStatement(insertQuery);
 
             // Set the parameters
-            preparedStatement.setLong(1, id);
-            preparedStatement.setString(2, destination);
-            preparedStatement.setInt(3, postesDisponibles);
-            preparedStatement.setString(4, responsableLocal);
+            //preparedStatement.setLong(1, id);
+            preparedStatement.setString(1, destination);
+            preparedStatement.setInt(2, postesDisponibles);
+            preparedStatement.setString(3, responsableLocal);
 
             // Execute the update
             preparedStatement.executeUpdate();

@@ -1,10 +1,10 @@
 package models;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Etudiant {
     private Long id;
@@ -12,7 +12,7 @@ public class Etudiant {
     private String nom;
     private String prenom;
 
-    private int numeroEtudiant;
+    private double numeroEtudiant;
 
     private double noteMoyenne;
 
@@ -43,11 +43,11 @@ public class Etudiant {
         this.prenom = prenom;
     }
 
-    public int getNumeroEtudiant() {
+    public double getNumeroEtudiant() {
         return numeroEtudiant;
     }
 
-    public void setNumeroEtudiant(int numeroEtudiant) {
+    public void setNumeroEtudiant(double numeroEtudiant) {
         this.numeroEtudiant = numeroEtudiant;
     }
 
@@ -73,18 +73,18 @@ public class Etudiant {
 
         try {
             // Get the database connection
-            connection = ConnexionJDBC.obtenirConnexion();
+            connection = ConnexionJDBC.getConnexion();
 
             // Prepare the SQL statement
-            String insertQuery = "INSERT INTO Etudiant (id, nom, prenom, numeroEtudiant, noteMoyenne) VALUES (?, ?, ?, ?, ?)";
+            String insertQuery = "INSERT INTO Etudiant ( nom, prenom, numeroEtudiant, noteMoyenne) VALUES ( ?, ?, ?, ?)";
             preparedStatement = connection.prepareStatement(insertQuery);
 
             // Set the parameters
-            preparedStatement.setLong(1, id);
-            preparedStatement.setString(2, nom);
-            preparedStatement.setString(3, prenom);
-            preparedStatement.setInt(4, numeroEtudiant);
-            preparedStatement.setDouble(5, noteMoyenne);
+            //preparedStatement.setLong(1, id);
+            preparedStatement.setString(1, nom);
+            preparedStatement.setString(2, prenom);
+            preparedStatement.setDouble(3, numeroEtudiant);
+            preparedStatement.setDouble(4, noteMoyenne);
 
             // Execute the update
             preparedStatement.executeUpdate();
@@ -106,5 +106,3 @@ public class Etudiant {
         }
     }
 }
-//Pour les étudiants qui demandent une bourse, on veut connaitre leur nom, prénom, numéro
-//étudiant, note moyenne du dernier semestre validé.

@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ab25c31-bd9d-4acc-9367-0d5c238c6934" name="Changes" comment="Insert into database function for each class">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+    <list default="true" id="5ab25c31-bd9d-4acc-9367-0d5c238c6934" name="Changes" comment="Probleme avec l'ajout d'une candidature">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_12_2023_15_31__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_12_2023_15_31__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CandidatureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CandidatureController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Bourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Bourse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Candidature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Candidature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Enseignant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Enseignant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/ConnexionJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/ConnexionJDBC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Enseignement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Enseignement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Etudiant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Etudiant.java" afterDir="false" />
     </list>
@@ -45,6 +42,9 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2ZQlXyK8EkCl7flMBgBGf76w2qF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -65,7 +65,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.17641325",
     "vue.rearranger.settings.migration": "true"
@@ -127,7 +127,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Insert into database function for each class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Insert into database function for each class" />
+    <MESSAGE value="Probleme avec l'ajout d'une candidature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Probleme avec l'ajout d'une candidature" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BoursesErasmus$HelloApplication.ic" NAME="HelloApplication Coverage Results" MODIFIED="1702404655133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
